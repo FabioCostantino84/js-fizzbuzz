@@ -25,4 +25,9 @@ for (let i = 1; i <= 100; i++) {
         console.log(i);
       
     }
+    
+    const markup = `<li> ${i} </li>`
+    const liElement = document.createElement('li');
+    liElement.append(i);
+    i.append(liElement);
 }
