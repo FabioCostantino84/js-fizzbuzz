@@ -26,8 +26,11 @@ for (let i = 1; i <= 100; i++) {
       
     }
     
-    const markup = `<li> ${i} </li>`
-    const liElement = document.createElement('li');
-    liElement.append(i);
-    i.append(liElement);
+    
+    const liElement = document.createElement('li'); // <li></li>
+    liElement.innerText = i;// <li>1</li>
+    //liElement.classList
+
+    document.getElementById('list').append(liElement); // <li></li>1
+
 }
