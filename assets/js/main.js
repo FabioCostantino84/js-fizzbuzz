@@ -10,32 +10,37 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 //stampare in console per i multipli di 3 "Fizz"
 //stampare in console sia per i multipli di 3 e di 5 "FizzBuzz"
 
-let element = document.getElementById('list');
+let fieldsElement = document.querySelector('.fields');
 
 for (let i = 1; i <= 100; i++) {
-    
-    const liElement = document.createElement('li');
+
+    const fieldElement = document.createElement('div')
+
+    fieldElement.classList.add('box')
 
     if ((i % 3) === 0 && (i % 5) === 0) {
-        console.log("FizzBuzz");
-        liElement.append ('FizzBuzz')
-       
+        console.log('fizzbuzz');
+        fieldElement.append('fizzbuzz')
+        fieldElement.classList.add('bg-red')
+
     } else if ((i % 3) === 0) {
-        console.log("Fizz");
-        liElement.append ('Fizz')
+        console.log('fizz');
+        fieldElement.append('fizz')
+        fieldElement.classList.add('bg-green')
 
     } else if ((i % 5) === 0) {
-        console.log("Buzz");
-        liElement.append ('Buzz')
+        console.log('buzz');
+        fieldElement.append('buzz')
+        fieldElement.classList.add('bg-yellow')
 
-       
+
     } else {
         console.log(i);
-        liElement.append (i);
+        fieldElement.append(i)
 
-      
+
     }
 
-    element.append(liElement);
+    fieldsElement.append(fieldElement)
 
 }
